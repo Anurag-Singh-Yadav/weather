@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="heading-container">
+            <h1>WEATHER APP</h1>
+        </div>
+
+
+        <div class="tab-container">
+
+            <div class="tab your_weather" data-userWeather>
+                Your Weather
+            </div>
+
+            <div class="tab search-weather" data-searchWeather>
+                Search Weather
+            </div>
+        </div>
+
+        <div class="main-container">
+            <!-- grand location -->
+            <div class="grand-location flex hide">
+
+                <div class="logo_location">
+                    <img src="/map.png" alt="" width="80" height="80">
+                </div>
+                <h1>Grand Location Access</h1>
+                <div>Allow Access to get Weather information</div>
+
+                <div>
+                    <button class="access-button">Grand Access</button>
+                </div>
+
+            </div>
+
+            <!-- search-form -->
+
+            <div class="search-bar hide">
+                <form class="form-container flex" data-searchForm>
+                    <input class="ipt" type="text" placeholder="Search for City" data-searchInput>
+
+                    <button class="search-btn"><img src="https://codehelp-weather-app.netlify.app/assets/search.png"
+                            width="30px" height="30px" alt=""></button>
+                </form>
+            </div>
+
+
+            <!-- loding screen -->
+            <div class="loading-container flex hide">
+
+                <div class="loading-img">
+                    <img class="img-search" src="https://codehelp-weather-app.netlify.app/assets/loading.gif" alt=""
+                        srcset=""">
+                    <p>Loading...</p>
+                </div>
+
+            </div>
+
+            <!-- error image  -->
+            <div class="error-img flex hide">
+                <div>
+                    <img src="/404.png" alt="" srcset="">
+                </div>
+            </div>
+
+            <!-- show weather-info -->
+
+            <div class="user-info-container hide">
+
+                <div class="information flex">
+                    <div class="name flex">
+                        <div data-cityName></div>
+                        <img src="" alt="" class="cntimg" data-countryIcon>
+                    </div>
+
+                    <p data-weatherDescription></p>
+                    <img src="" alt="" data-weatherIcon>
+                    <p data-weatherTemp></p>
+                </div>
+
+                <!-- weather card -->
+
+                <div class="weather-parameter flex">
+                    <!-- wind -->
+                    <div class="cards flex">
+                        <img class="weather-img" src="https://codehelp-weather-app.netlify.app/assets/wind.png" alt="">
+                        <p>WindSpeed</p>
+                        <p data-weatherWind></p>
+                    </div>
+                    <!-- humidity -->
+
+                    <div class="cards flex">
+                        <img class="weather-img" src="https://codehelp-weather-app.netlify.app/assets/humidity.png"
+                            alt="">
+                        <p>Humidity</p>
+                        <p data-weatherHumidity></p>
+
+
+
+                    </div>
+
+                    <!-- clouds -->
+                    <div class="cards flex">
+                        <img class="weather-img" src="https://codehelp-weather-app.netlify.app/assets/cloud.png" alt="">
+                        <p>Clouds</p>
+                        <p data-weatherCloud></p>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
